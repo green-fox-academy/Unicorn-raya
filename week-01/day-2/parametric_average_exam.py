@@ -6,3 +6,10 @@
 # Sum: 22, Average: 4.4
 
 
+number = int(input("Input epoch times: "))
+sum,avg = 0,0
+for i in range(number):
+    sum += int(input("Enter number: "))
+avg = sum / number
+
+print(f'Sum: {sum}, Average: {avg}')
