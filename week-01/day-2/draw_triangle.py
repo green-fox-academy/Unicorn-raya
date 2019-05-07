@@ -10,9 +10,10 @@
 
 
 length = int(input())
+tmp = ""
 
-for i in range(length):
-    print('\n')
+for i in range(length+1):
     for j in range(i):
-        print("*")
-    
+        tmp += "*"
+    print(tmp + '\n')
+    tmp = ""
