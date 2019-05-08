@@ -1,1 +1,0 @@
-rua day-4/s4.txt day-5/s5.txt
