@@ -21,6 +21,16 @@ else:
 
 lst_B.remove("Durian")
 lst_A.insert(4,"Kiwifruit")
-print(lst_B)
-print(lst_A)
+print(len(lst_B))
+print(len(lst_A))
+for i in range(len(lst_A)):
+    if lst_A[i] == "Avocado":
+        print(f'Avocado index is {i}')
 
+for i in range(len(lst_B)):
+    if lst_A[i] == "Durian":
+        print(f'Durian index is {i}')
+
+lst_B.extend(["Passion Fruit", "Pummelo"])
+
+print(lst_A[2])
