@@ -71,18 +71,24 @@ for i in Alice.keys():
     sum += Alice[i] * price[i]
 print(sum)
 
-def find_items(name,key_name):
+def set_default_as_zero(name,key_name):
     if key_name not in name.keys():
         name[key_name] = 0
      
 # Who buys more Rice?
-find_items(Alice,"Rice")
-find_items(Bob,"Rice")
+set_default_as_zero(Alice,"Rice")
+set_default_as_zero(Bob,"Rice")
 print(max(Alice["Rice"],Bob["Rice"]))
 # Who buys more Potato?
-find_items(Alice,"Potato")
-find_items(Bob,"Potatp")
+set_default_as_zero(Alice,"Potato")
+set_default_as_zero(Bob,"Potatp")
 print(max(Alice["Potato"],Bob["Potato"]))
 # Who buys more different products?
-
-# Who buys more products? (piece)/
+#?
+# Who buys more products? (piece)
+def count_all_product(dic_file):
+    sum = 0
+    for i in dic_file.keys():
+        sum += dic_file[i]
+    return sum
+print(max(count_all_product(Alice),count_all_product(Bob)))
