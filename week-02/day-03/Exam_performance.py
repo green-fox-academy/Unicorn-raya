@@ -39,21 +39,20 @@ def get_tsv_file(tsv_file_name):
         buffer = tsv_file.readlines()
         for index in range(1,len(buffer)):
             data_in_list.append(buffer[index])
-    max_number = -1
-    point = 0
-    min_number = 999999
+    max_ratio = -1
     #print(data_in_list)
     for line in data_in_list:
-        tmp_number = format2seconds(list(line.split('\t'))[2])
+        point = int(list(line.split('\t'))[1])
+        times = format2seconds(list(line.split('\t'))[2])
+        if times == 0:
+            continue
+        tmp_ratio = point/times *60
         #print(tmp_number)
-        if tmp_number > max_number:
-            max_number = tmp_number
-            point = int(list(line.split('\t'))[1])
-        if tmp_number < min_number and tmp_number != 0:
-            min_number = tmp_number
-
+        
+        if tmp_ratio > max_ratio:
+            max_ratio = tmp_ratio
     #return point,max_number
-    return point/max_number
+    return max_ratio
 
 tsv_file_name = "C:\\Users\\Ray_Zhang\\greenfox\\Unicorn-raya\\week-02\\day-03\\exams.tsv"
 
