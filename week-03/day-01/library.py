@@ -91,18 +91,18 @@ class Bookshelf:
                  favorite author is: {self.fav_author}"
 
 
-B1 = Book("Douglas Adams","The Hitchhiker's Guide to the Galaxy",1979)
-B2 = Book("Douglas Adams","The Hitchhiker's Guide to the Galaxy",1979)
-B3 = Book("ummmm","this is a book",6699)
+# B1 = Book("Douglas Adams","The Hitchhiker's Guide to the Galaxy",1979)
+# B2 = Book("Douglas Adams","The Hitchhiker's Guide to the Galaxy",1979)
+# B3 = Book("ummmm","this is a book",6699)
 
-BLIST = [B1,B2]
+# BLIST = [B1,B2]
 
-BS = Bookshelf(BLIST)
-BS.refresh_info()
-print(str(BS))
-BS.add_book(B3)     
-BS.refresh_info()
-print(str(BS))
-BS.remove_book("The Hitchhiker's Guide to the Galaxy")
-BS.refresh_info()
-print(str(BS))
+# BS = Bookshelf(BLIST)
+# BS.refresh_info()
+# print(str(BS))
+# BS.add_book(B3)     
+# BS.refresh_info()
+# print(str(BS))
+# BS.remove_book("The Hitchhiker's Guide to the Galaxy")
+# BS.refresh_info()
+# print(str(BS))

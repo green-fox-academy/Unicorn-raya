@@ -45,8 +45,8 @@ class Extract_data:
     
 csv_file_name = "C:\\Users\\Ray_Zhang\\greenfox\\Unicorn-raya\\week-02\\day-05\\real_logs.csv"
 
-ee = Extract_data(csv_file_name)
-ee.get_employers()
+# ee = Extract_data(csv_file_name)
+# ee.get_employers()
 #print(len(ee.employees))
 #id = "00115:46240"
 #ee.get_employer_massage(id)
