@@ -11,10 +11,10 @@ class Animal_test(unittest.TestCase):
         self.assertEqual(self.a2.name,"Dog")
 
     def test_Animal_heal(self):
-        self.assertEqual(self.a1.heal(),False)
-        self.assertEqual(self.a2.heal(),True)
+        self.assertEqual(self.a1.isAdoptable(),False)
+        self.assertEqual(self.a2.isAdoptable(),True)
 
-    def test_Animal_heal(self):
+    def test_Animal_cost(self):
         self.assertEqual(self.a1.healCost,1)
         self.assertEqual(self.a2.healCost,3)
 
