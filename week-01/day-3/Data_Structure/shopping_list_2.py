@@ -71,17 +71,17 @@ for i in Alice.keys():
     sum += Alice[i] * price[i]
 print(sum)
 
-def set_default_as_zero(name,key_name):
+def set_zero_as_default(name,key_name):
     if key_name not in name.keys():
         name[key_name] = 0
      
 # Who buys more Rice?
-set_default_as_zero(Alice,"Rice")
-set_default_as_zero(Bob,"Rice")
+set_zero_as_default(Alice,"Rice")
+set_zero_as_default(Bob,"Rice")
 print(max(Alice["Rice"],Bob["Rice"]))
 # Who buys more Potato?
-set_default_as_zero(Alice,"Potato")
-set_default_as_zero(Bob,"Potatp")
+set_zero_as_default(Alice,"Potato")
+set_zero_as_default(Bob,"Potatp")
 print(max(Alice["Potato"],Bob["Potato"]))
 # Who buys more different products?
 #?

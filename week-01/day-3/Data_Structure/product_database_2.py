@@ -22,10 +22,10 @@ dic = {
 "Chicken": "550"
 }
 
-for i in dic.keys():
-    if int(dic[i]) < 201:
-        print(i)
+for key in dic.keys():
+    if int(dic[key]) < 201:
+        print(key)
 print("---------------------")
-for i in dic.keys():
-    if int(dic[i]) > 150:
-        print(f'{i} : {dic[i]}')
+for key in dic.keys():
+    if int(dic[key]) > 150:
+        print(f'{key} : {dic[key]}')

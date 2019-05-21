@@ -22,10 +22,8 @@ class Test_CBGame(unittest.TestCase):
     
     def test_status(self):
         self.assertEquals(self.status, "playing")
-        self.assertEquals(self.status, "finished")
+        #self.assertEquals(self.status, "finished")
     
-    
-        
 
 if __name__ == '__main__':
     unittest.main()

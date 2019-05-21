@@ -31,7 +31,7 @@ print(max(dic,key = dic.get))
 print(min(dic,key = dic.get))
 print(sum(int(dic[i]) for i in dic.keys()) / len(dic) )
 
-for i in dic.keys():
-    if dic[i] == "125":
-        print(i)
+for key in dic.keys():
+    if dic[key] == "125":
+        print(key)
 
