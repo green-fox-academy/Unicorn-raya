@@ -33,7 +33,7 @@ class DCHero(Hero):
         super().__init__(DCname,45)
 
     def hit(self,evilman):
-        if not isinstance(evalman,DCHero):
+        if not isinstance(evilman,DCHero):
             print("Another universal hero...")
         else:
             self.punch(evilman)
