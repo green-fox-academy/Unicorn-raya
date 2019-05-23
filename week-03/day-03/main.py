@@ -1,5 +1,6 @@
 from flask import Flask,request,render_template
 import csv
+from functions import splitdata2list,search_by_price,search_by_product_name,search_by_qtys
 app = Flask(__name__)
 #task 1
 
@@ -33,38 +34,29 @@ app = Flask(__name__)
 #     return render_template("movie.html",mov = movie[int(movie_index)-1])
 
 # task 3
-
-
-
-def search_by_keyWord(keyword):
-    products = {}
-    filename = open("Unicorn-raya\week-03\day-03\products.csv")
-    tmp_list = []
-    products_name =[]
-    prick
-
-    for line in filename:
-        tmp_list.append(line)
-    filename.close()
-    for index in range(1,len(tmp_list)):
-        tmp_string = list(tmp_list[index].split(";"))
-        products[tmp_string[1]] = f"price: {tmp_string[2]}, qty: {tmp_string[3]}" 
-    if keyword in products.keys():
-        return products[keyword]
-    else:
-        return "NOPE"
-
-
 @app.route('/')
 def main_page():
     return render_template("search_page.html")
 
-@app.route('/result')
-def index_page(movie_index):
-    return render_template("search_result_page.html")#,mov = movie[int(movie_index)-1])
+@app.route('/result',methods = ["POST"])
+def result_page():
+    name = request.form.get('product_name')
+    price = request.form.get('price_name')
+    qty = request.form.get('qty_name')
+
+    pnameLst,priceLst,qtysLst = splitdata2list()
+    price_qtys = search_by_product_name(name,pnameLst,priceLst,qtysLst)
+    name_qtys =search_by_price(price,pnameLst,priceLst,qtysLst)
+    name_price =search_by_qtys(qty,pnameLst,priceLst,qtysLst)
+    #len(price_qtys)  len(name_qtys) len(name_price)
+    if name:
+        return render_template("search_result_page.html",resultlist = price_qtys)
+    if price:
+        return render_template("search_result_page.html",resultlist = name_qtys)
+    if qty:
+        return render_template("search_result_page.html",resultlist = name_price)
     # return f'{request.args.get("test1", "test2")}'
     #http://localhost:5000/movie?test1=hello
-
 
 
 if __name__ == '__main__':

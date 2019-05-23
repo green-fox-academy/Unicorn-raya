@@ -16,31 +16,54 @@ def splitdata2list():
     return product_names,prices,qtys
 
 def search_by_product_name(p_name,p_names,prices,qtys):
+    price_list = []
+    qtys_list = []  
     for index in range(len(p_names)):
         if p_names[index] == p_name:
-            return prices[index],qtys[index]
-    return "{p_name} is not in list"
+            price_list.append(prices[index])
+            qtys_list.append(qtys[index])
+    result_string = []
+    for index in range(len(price_list)):
+        tmp = "prices :" + price_list[index] + " qtys: "+qtys_list[index]
+        result_string.append(tmp)
+    return result_string
 
 def search_by_price(price,p_names,prices,qtys):
+    product_list =[]
+    qtys_list = []
     for index in range(len(prices)):
         if prices[index] == price:
-            return p_names[index],qtys[index]
-    return "{price} is not in list"
+            product_list.append(p_names[index])
+            qtys_list.append(qtys[index])
+    result_string = []
+    for index in range(len(product_list)):
+        tmp = "procuctName :" + product_list[index] + " qtys: "+qtys_list[index]
+        result_string.append(tmp)
+
+    return result_string
 
 def search_by_qtys(qty,p_names,prices,qtys):
+    product_list = []
+    qtys_list = []
     for index in range(len(qtys)):
         if qtys[index] == qty:
-            return p_names[index],prices[index]
-    return "{qty} is not in list"
+            product_list.append(p_names[index])
+            qtys_list.append(prices[index])
+    result_string = []
+    for index in range(len(product_list)):
+        tmp = "procuctName :" + product_list[index] + " prices: "+qtys_list[index]
+        result_string.append(tmp)
+
+    return result_string
 
 product_names,prices,qtys = splitdata2list()
-# print(product_names)
+#print(product_names)
 # print(prices)
 # print(qtys)
 
 p_name = "display"
 price = "70"
-qty = "5"
+qty = "10"
 
 print(search_by_price(price,product_names,prices,qtys))
 print(search_by_product_name(p_name,product_names,prices,qtys))
