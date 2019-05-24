@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Post</h1>
+        {% for post in posts %}
+            <article>
+                <h1 id = {{post.postID}}>{{post.author_name}}#{{post.postID}}<a href="#p{{post.postID}}">{{post.author_name[0] | capitalize}}</a></h1>
+                <p>{{post.context}}</p>
+                {% if post.liked == [] %}
+                    <p></p>    
+                {% else %} 
+                    <p>Liked by
+                        {% for name in post.liked %}
+                            {% if post.liked | length == 1 %}
+                               {{name}}
+                            {% elif loop.last %}
+                                and {{name}}.
+                            {% else %}
+                                {{name}},
+                            {% endif %}
+                        {% endfor %}
+                    </p>
+            {% endif %} 
+            </article>
+        {% endfor %}
+    </body>
+</html>
