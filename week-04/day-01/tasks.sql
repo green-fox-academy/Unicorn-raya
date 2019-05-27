@@ -110,11 +110,17 @@ select avg(rating) from reviews;
 
 
 -- Which product has the best average rating?
-select products.name, max(tmptable.avg_num) from (select product_id,avg(reviews.rating) as avg_num from reviews group by reviews.id) as tmptable inner join products on products.id = tmptable.product_id;
-???
--- Which product has the worst rating?
-???
 
+select avg(reviews.rating),reviews.product_id,products.name
+from reviews left outer join product on reviews.product_id = products.id
+group by reviews.product_id, products.name
+order by AVG(reviews.rating) limit 1;
+
+-- Which product has the worst rating?
+select min(reviews.rating),reviews.product_id,products.name
+from reviews left outer join product on reviews.product_id = products.id
+group by reviews.product_id, products.name
+order by min(reviews.rating) asc limit 1;
 
 -- Which products have no review?
 select name from products left outer join reviews on products.id = reviews.product_id where comment is null;
@@ -235,12 +241,20 @@ select name from products left outer join reviews on products.id = reviews.produ
 (112 rows)
 
 -- How many reviews are 3 or below without comment?
+select count(*) from reviews 
+where rating <4 and comment is null;
 
 -- Which user reviewed the most?
-select name, count(user_id) as u_count from users right join reviews on users.id = reviews.user_id group by reviews.user_id;
-
+select name, count(user_id) as u_count 
+from users right outer join reviews on users.id = reviews.user_id 
+group by reviews.user_id,users.username
+order by count(user_id) desc limit 1;
 
 -- List the average rating for each product
-
+select products.name,avg(reviews.rating),reviews.product_id 
+from reviews left outer join products on reviews.product_id = products.id
+group by reviews.product_id, products.name
+order by product_id;
 
 -- How many days passed since the last review?
+select  GETDATE() - max(date) from reviews as DaysGone
