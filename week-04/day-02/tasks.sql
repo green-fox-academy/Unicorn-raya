@@ -1,3 +1,5 @@
+\o output.txt
+
 -- Create a view where you display the reviewer's name and the amount of their review
 create view reviewers (reviewer_name,review_amount) as (
     select Reviewer.name,count(*) from Reviewer join rating on Reviewer.rID  = Rating.rID
@@ -77,3 +79,5 @@ select * from avg_rating;
 
 
 drop view avg_rating;
+
+\o
