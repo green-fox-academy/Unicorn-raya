@@ -31,6 +31,7 @@ def init_db():
 def insert_data_by_file(json_file_name,connection):
     json_file = open(json_file_name,'r')
     cars = json.load(json_file)
+    
     cursor = connection.cursor()
     db_insert = """INSERT INTO CarDealer VALUES (%s,%s,%s,%s,%s,%s,%s)"""
     for car in cars:

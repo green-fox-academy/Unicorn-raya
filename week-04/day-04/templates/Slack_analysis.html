@@ -5,7 +5,7 @@
         <title>NAVI</title>
         <style>
             .head_form{
-                background-color:rgb(98, 93, 107);
+                background-color:rgb(89, 148, 175);
                 width: auto;
                 height: 65px;
                 text-align: right;
@@ -13,15 +13,14 @@
                 background-size: 5%;
                 background-position-x: left;
                 background-repeat: no-repeat;
-
             }
             .bk{
-                background-image: url("background.jpg");
+                background-image: url("static/background.jpg");
                 background-size: cover;
             }
             ul ol{
                 display: inline;
-                color:pink;
+                color:rgb(70, 114, 180);
                 font-size: 20px;
                 margin-right: 20px;
                 line-height: 50px;
@@ -34,7 +33,7 @@
             .subtitle{
                 font-size: 30px;
                 margin-left: 30px;
-                color:pink;
+                color:rgb(70, 114, 180);
             }
             .paragraph{
                 font-size: 20px;
@@ -54,8 +53,6 @@
                 margin-left: 30px;
                 font-weight: bold;
             }
-
-
         </style>
     </head>
     <body>
@@ -72,22 +69,21 @@
             <p class = "title">Slack analysis</p>
             <p class = "subtitle">Project description</p>
             <div class= "paragraph">
-                <p>Now you are going to analyze one of our Slack channels messages. <br>We will 
-                    provide you the data and give you some hint how to work on the project. 
-                    Also you will get the documentation of the used API-s so you can find any 
-                    necessary information about the source files.
+                <p>Now you are going to analyze one of our Slack channels messages. 
+                    We will provide you the data <br>and give you some hint how to work on 
+                    the project. Also you will get the documentation of the <br>used 
+                    API-s so you can find any necessary information about the source files.
                 </p>
             </div>
-            
-            <p class = "empty"> ---- </p>
+<!--             
+            <p class = "empty"> --------------- </p> -->
             
             <!-- <p class = "context_title">Technology wiki</p> -->
             <p class = "paragraph_title">Database</p>
-            <p class = "paragraph">
-                We recommend you to use the following db schema, but of 
-                course you can <br>change it if you find think another schema would 
-                fit better to your idea.
-            </p>
+            <div class = "paragraph">
+                <p>The database is designed as the following graph.</p>
+                <img src="static/slack_db.png"> 
+            </div>
         </div>
     </body>
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>Top 20 react most message</title>
+        <style>            
+            .head_form{
+                    background-color:rgb(89, 148, 175);
+                    width: auto;
+                    height: 65px;
+                    text-align: left;
+                    font-size: 250%;
+                    background-image: url(dog.jpg);
+                    background-size: 5%;
+                    background-position-x: left;
+                    background-repeat: no-repeat;
+                }
+            table{
+                border-collapse: collapse;
+            }
+            th{
+                border: 1px solid black;
+                padding: 1px;
+                text-align:center;
+            }
+            td{
+                border: 1px solid black;
+                padding: 1px;
+                text-align:center;
+            }
+            .img{
+                float：right
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class = "head_form">
+            <ul>
+                <a href = "/"><img src="static/homei.png" height="50" width="50"></a>
+                <a>Who reacted to the most messages?</a>
+            </ul>
+        </div>
+       
+        <div style="display:inline-block">
+        <table align="center">
+            <tr>
+                <th>#</th>
+                <th>User Id</th>
+                <th>React Message Times</th>
+            </tr>
+            {% for comic in message %}
+            <tr>
+                <td>{{loop.index}}</td>
+                <td>{{comic[0]}}</td>
+                <td>{{comic[1]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        </div> 
+        <div style="display:inline-block">
+        <img src="static/message.png" >
+        </div>
+    </body>
+</html>
