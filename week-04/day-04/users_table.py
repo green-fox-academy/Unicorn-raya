@@ -33,25 +33,55 @@ def db_users_insertion(db_connnection,json_file_name_1):
     json_file = open(json_file_name_1,'r')
     messages = json.load(json_file)
     users = []
-    for mss in messages:
-        if "user" in mss.keys():
-            users.append(mss["user"])
-        if "text" in mss.keys():
-            text = mss["text"]
-            r = re.compile(r"<@(\w{9})>")
-            users_in_text =r.findall(text)
-            for uit in users_in_text:
-                users.append(uit)
-        if "reply_users" in mss.keys():
-            for user in mss["reply_users"]:
-                users.append(user)
-        if "reactions" in mss.keys():
-            if "users" in mss["reactions"]:
-                for user in mss["reaction"]["users"]:
-                    user.append(user)
+    test_users = []
+
+    users_1_sentence = filter(lambda x: "user" in x,messages)
+    user_1 = map(lambda x:x["user"],users_1_sentence)  
+
+    r = re.compile(r"<@(\w{9})>")
+    text = filter(lambda x: "text" in x,messages)
+    users_sentence = map(lambda x:x["text"],text)
+    users_2 = map(lambda x:r.findall(x),users_sentence)
+    user_2 = [x for j in users_2 for x in j]
+
+    replies = filter(lambda x: "reply_users" in x,messages)
+    user_3 = map(lambda x:x["user"],replies)
+
+    reactions = filter(lambda x: "reactions" in x,messages)
+    users_4 = map(lambda x: x["reactions"][0]["users"],reactions)
+    user_4 =[x for j in users_4 for x in j]
+
+    #print(list(user_4))
+    
+    test_users = list(user_1) + list(user_2) + list(user_3) + list(user_4)
+
+    # for mss in messages:
+    #     if "user" in mss.keys():
+    #         users.append(mss["user"])
+        
+    #     if "text" in mss.keys():
+    #         text = mss["text"]
+    #         r = re.compile(r"<@(\w{9})>")
+    #         users_in_text =r.findall(text)
+    #         for uit in users_in_text:
+    #             users.append(uit)
+        
+    #     if "reply_users" in mss.keys():
+    #         for user in mss["reply_users"]:
+    #             users.append(user)
+    #     if "reactions" in mss.keys():
+    #         if "users" in mss["reactions"]:
+    #             for user in mss["reaction"]["users"]:
+    #                 user.append(user)
     
     json_file.close()
-    users = list(set(users))
+    
+    #print(test_users)
+    #users = list(set(users))
+    users = list(set(test_users))
+    #print(users)
+
+
     cursor = db_connnection.cursor()
     insertion = """INSERT INTO users (USER_ID) VALUES (%s)"""       
     for user in users:
@@ -85,7 +115,7 @@ json_file_1 = 'C:\\Users\\Ray_Zhang\\greenfox\\Unicorn-raya\\week-04\\day-04\\th
 
 connection = init_db()
 #db_users_drop(connection)
-db_users_creation(connection)
+#db_users_creation(connection)
 db_users_insertion(connection,json_file_1)
 
 close_db(connection)
