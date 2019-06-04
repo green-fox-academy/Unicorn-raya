@@ -28,7 +28,7 @@ def db_mentions_insertion(db_connnection,json_file_name_1):
     json_file = open(json_file_name_1,'r')
     messages = json.load(json_file)
     cursor = db_connnection.cursor()
-    insertion = """INSERT INTO mentions (USER_ID,MESSAGE_ID) VALUES (%s,%s)"""       
+    insertion = """INSERT INTO mentions (USER_ID,MESSAGE_ID) VALUES (%s,%s)"""           
     for message in messages:
         text = message["text"]
         r = re.compile(r"<@(\w{9})>")
