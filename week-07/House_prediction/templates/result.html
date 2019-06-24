@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_448f73cb3f22408b8f03dcbae8187981 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_448f73cb3f22408b8f03dcbae8187981" ></div>
+        
+</body>
+<script>    
+    
+            var map_448f73cb3f22408b8f03dcbae8187981 = L.map(
+                "map_448f73cb3f22408b8f03dcbae8187981",
+                {
+                    center: [50.941123, -2.645607],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_07e9f79e0f6740d282f059ee3d62080c = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var marker_0f519c4432924992b6f037715b7b89c3 = L.marker(
+                [50.943986, -2.641732],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_bf4ec4d49d2d4a75871889343b989aa9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0f519c4432924992b6f037715b7b89c3.setIcon(icon_bf4ec4d49d2d4a75871889343b989aa9);
+        
+    
+        var popup_6711edf55893413187c1625c03e636a9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_46a30024ee09453daad935dd9b99c810 = $(`<div id="html_46a30024ee09453daad935dd9b99c810" style="width: 100.0%; height: 100.0%;">Sold price here is ₤480000</div>`)[0];
+            popup_6711edf55893413187c1625c03e636a9.setContent(html_46a30024ee09453daad935dd9b99c810);
+        
+
+        marker_0f519c4432924992b6f037715b7b89c3.bindPopup(popup_6711edf55893413187c1625c03e636a9)
+        ;
+
+        
+    
+    
+            var marker_860c55e9d2894e04b6dfc561382d2cb4 = L.marker(
+                [50.942187, -2.648283],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_8cf69caf767547969634c5edaf8a4904 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_860c55e9d2894e04b6dfc561382d2cb4.setIcon(icon_8cf69caf767547969634c5edaf8a4904);
+        
+    
+        var popup_ce41eb733aae4f4986f626ee01a2c516 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_222fa25e451348a297d3ceac9582a801 = $(`<div id="html_222fa25e451348a297d3ceac9582a801" style="width: 100.0%; height: 100.0%;">Sold price here is ₤97500</div>`)[0];
+            popup_ce41eb733aae4f4986f626ee01a2c516.setContent(html_222fa25e451348a297d3ceac9582a801);
+        
+
+        marker_860c55e9d2894e04b6dfc561382d2cb4.bindPopup(popup_ce41eb733aae4f4986f626ee01a2c516)
+        ;
+
+        
+    
+    
+            var marker_f105aa5167104522964d0ea6ec43bbeb = L.marker(
+                [50.944371, -2.645253],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_3b36a2fc38a443a5b272c2b73f4f884b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f105aa5167104522964d0ea6ec43bbeb.setIcon(icon_3b36a2fc38a443a5b272c2b73f4f884b);
+        
+    
+        var popup_beebbe1a7fbb4fdc9b82d462c5ef0d23 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d1e4f926dbf14da7a85110c0cc295ec7 = $(`<div id="html_d1e4f926dbf14da7a85110c0cc295ec7" style="width: 100.0%; height: 100.0%;">Sold price here is ₤290000</div>`)[0];
+            popup_beebbe1a7fbb4fdc9b82d462c5ef0d23.setContent(html_d1e4f926dbf14da7a85110c0cc295ec7);
+        
+
+        marker_f105aa5167104522964d0ea6ec43bbeb.bindPopup(popup_beebbe1a7fbb4fdc9b82d462c5ef0d23)
+        ;
+
+        
+    
+    
+            var marker_a169f1d00f544053b2b693daa3dfb92f = L.marker(
+                [50.944342, -2.648882],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_02febf7d01114745abb5b6ce68289a13 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a169f1d00f544053b2b693daa3dfb92f.setIcon(icon_02febf7d01114745abb5b6ce68289a13);
+        
+    
+        var popup_567e92251e824b888816b4fb9af054d2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4af2a135c2cd47009330b69d5780cb6c = $(`<div id="html_4af2a135c2cd47009330b69d5780cb6c" style="width: 100.0%; height: 100.0%;">Sold price here is ₤332000</div>`)[0];
+            popup_567e92251e824b888816b4fb9af054d2.setContent(html_4af2a135c2cd47009330b69d5780cb6c);
+        
+
+        marker_a169f1d00f544053b2b693daa3dfb92f.bindPopup(popup_567e92251e824b888816b4fb9af054d2)
+        ;
+
+        
+    
+    
+            var marker_93394a369488448a9ab6b48d920cbb17 = L.marker(
+                [50.940821, -2.641603],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_788ddc3887274e7e847ac860afb066e9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_93394a369488448a9ab6b48d920cbb17.setIcon(icon_788ddc3887274e7e847ac860afb066e9);
+        
+    
+        var popup_203d692aafc940a2937abbbef640a564 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8154668f05540ec978abe544067b960 = $(`<div id="html_d8154668f05540ec978abe544067b960" style="width: 100.0%; height: 100.0%;">Sold price here is ₤414000</div>`)[0];
+            popup_203d692aafc940a2937abbbef640a564.setContent(html_d8154668f05540ec978abe544067b960);
+        
+
+        marker_93394a369488448a9ab6b48d920cbb17.bindPopup(popup_203d692aafc940a2937abbbef640a564)
+        ;
+
+        
+    
+    
+            var marker_0a7bb55f491b4f3790af528725cc0174 = L.marker(
+                [50.943814, -2.648405],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_ac172cd35cfd4984a418e3ca3b8109f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0a7bb55f491b4f3790af528725cc0174.setIcon(icon_ac172cd35cfd4984a418e3ca3b8109f0);
+        
+    
+        var popup_019d8f8726074eefbfa3bdb4fe0a2689 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cbdb5dbbf2324151b672b5d194a904db = $(`<div id="html_cbdb5dbbf2324151b672b5d194a904db" style="width: 100.0%; height: 100.0%;">Sold price here is ₤240000</div>`)[0];
+            popup_019d8f8726074eefbfa3bdb4fe0a2689.setContent(html_cbdb5dbbf2324151b672b5d194a904db);
+        
+
+        marker_0a7bb55f491b4f3790af528725cc0174.bindPopup(popup_019d8f8726074eefbfa3bdb4fe0a2689)
+        ;
+
+        
+    
+    
+            var marker_421ecba8e9e346a4884300405c2f40be = L.marker(
+                [50.940287, -2.640685],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_8da62823b168415b96e94c602e625e19 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_421ecba8e9e346a4884300405c2f40be.setIcon(icon_8da62823b168415b96e94c602e625e19);
+        
+    
+        var popup_40e0d879482d43319f9e22d6cd558502 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2d3b2cad56a942f6bf6517a208889f32 = $(`<div id="html_2d3b2cad56a942f6bf6517a208889f32" style="width: 100.0%; height: 100.0%;">Sold price here is ₤422500</div>`)[0];
+            popup_40e0d879482d43319f9e22d6cd558502.setContent(html_2d3b2cad56a942f6bf6517a208889f32);
+        
+
+        marker_421ecba8e9e346a4884300405c2f40be.bindPopup(popup_40e0d879482d43319f9e22d6cd558502)
+        ;
+
+        
+    
+    
+            var marker_1a00739a4c6547bb95ddbc2680b6be96 = L.marker(
+                [50.938896, -2.6417900000000003],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_e81965751ce44262870292b88894d8ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1a00739a4c6547bb95ddbc2680b6be96.setIcon(icon_e81965751ce44262870292b88894d8ad);
+        
+    
+        var popup_5c1f6f9a14b9447c9296fc4a2e278d26 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_95972eea703a4751891bc6e227ddbe37 = $(`<div id="html_95972eea703a4751891bc6e227ddbe37" style="width: 100.0%; height: 100.0%;">Sold price here is ₤137950</div>`)[0];
+            popup_5c1f6f9a14b9447c9296fc4a2e278d26.setContent(html_95972eea703a4751891bc6e227ddbe37);
+        
+
+        marker_1a00739a4c6547bb95ddbc2680b6be96.bindPopup(popup_5c1f6f9a14b9447c9296fc4a2e278d26)
+        ;
+
+        
+    
+    
+            var marker_538eb3869cff4bfb9609d3fe0d6fde37 = L.marker(
+                [50.94482100000001, -2.6467970000000003],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_adbcaceee6ee4c249a0def46373f274b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_538eb3869cff4bfb9609d3fe0d6fde37.setIcon(icon_adbcaceee6ee4c249a0def46373f274b);
+        
+    
+        var popup_483b1eb4bb164a03a97cc1934626e0d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a19691b3bbc4d3ea40c09a6041b87fa = $(`<div id="html_8a19691b3bbc4d3ea40c09a6041b87fa" style="width: 100.0%; height: 100.0%;">Sold price here is ₤247500</div>`)[0];
+            popup_483b1eb4bb164a03a97cc1934626e0d7.setContent(html_8a19691b3bbc4d3ea40c09a6041b87fa);
+        
+
+        marker_538eb3869cff4bfb9609d3fe0d6fde37.bindPopup(popup_483b1eb4bb164a03a97cc1934626e0d7)
+        ;
+
+        
+    
+    
+            var marker_4ec83921dec248d2be65f5d06c00b630 = L.marker(
+                [50.939667, -2.643907],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_325c1a5c9ae4474e9862738c4763cdcd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4ec83921dec248d2be65f5d06c00b630.setIcon(icon_325c1a5c9ae4474e9862738c4763cdcd);
+        
+    
+        var popup_6cd0f165a49642d8881bdef6638380e9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1382b6ede3cf460f86bfc69f1834dbc9 = $(`<div id="html_1382b6ede3cf460f86bfc69f1834dbc9" style="width: 100.0%; height: 100.0%;">Sold price here is ₤195000</div>`)[0];
+            popup_6cd0f165a49642d8881bdef6638380e9.setContent(html_1382b6ede3cf460f86bfc69f1834dbc9);
+        
+
+        marker_4ec83921dec248d2be65f5d06c00b630.bindPopup(popup_6cd0f165a49642d8881bdef6638380e9)
+        ;
+
+        
+    
+    
+            var marker_a471708bfa08463b999a42c71954d753 = L.marker(
+                [50.940287, -2.640685],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_8e9bac1340244f6ea00ab1a60d87b047 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a471708bfa08463b999a42c71954d753.setIcon(icon_8e9bac1340244f6ea00ab1a60d87b047);
+        
+    
+        var popup_fa6a0e8b2a774b52b01cb8b62e81ea34 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3c0d5a90d19a4f52b3f999882e40ca2b = $(`<div id="html_3c0d5a90d19a4f52b3f999882e40ca2b" style="width: 100.0%; height: 100.0%;">Sold price here is ₤178000</div>`)[0];
+            popup_fa6a0e8b2a774b52b01cb8b62e81ea34.setContent(html_3c0d5a90d19a4f52b3f999882e40ca2b);
+        
+
+        marker_a471708bfa08463b999a42c71954d753.bindPopup(popup_fa6a0e8b2a774b52b01cb8b62e81ea34)
+        ;
+
+        
+    
+    
+            var marker_619f56af5e3044e0b286996868cec4b9 = L.marker(
+                [50.940821, -2.641603],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_457947fe412a41888a6631133c5bcb0e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_619f56af5e3044e0b286996868cec4b9.setIcon(icon_457947fe412a41888a6631133c5bcb0e);
+        
+    
+        var popup_53c0394bb96140a6b3b261399a23f3ad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6d06256b85146df89b6b22e60dbb22c = $(`<div id="html_f6d06256b85146df89b6b22e60dbb22c" style="width: 100.0%; height: 100.0%;">Sold price here is ₤227000</div>`)[0];
+            popup_53c0394bb96140a6b3b261399a23f3ad.setContent(html_f6d06256b85146df89b6b22e60dbb22c);
+        
+
+        marker_619f56af5e3044e0b286996868cec4b9.bindPopup(popup_53c0394bb96140a6b3b261399a23f3ad)
+        ;
+
+        
+    
+    
+            var marker_74a9f68b7a8044c2a2515b17ba8cab34 = L.marker(
+                [50.944342, -2.648882],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_9526264668dc432184c3059912fa9efd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_74a9f68b7a8044c2a2515b17ba8cab34.setIcon(icon_9526264668dc432184c3059912fa9efd);
+        
+    
+        var popup_bd0153e552c6464cab23d7d863fa667d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8cc752103ca54cffb71d2ff346a734c8 = $(`<div id="html_8cc752103ca54cffb71d2ff346a734c8" style="width: 100.0%; height: 100.0%;">Sold price here is ₤185000</div>`)[0];
+            popup_bd0153e552c6464cab23d7d863fa667d.setContent(html_8cc752103ca54cffb71d2ff346a734c8);
+        
+
+        marker_74a9f68b7a8044c2a2515b17ba8cab34.bindPopup(popup_bd0153e552c6464cab23d7d863fa667d)
+        ;
+
+        
+    
+    
+            var marker_1151a7a4a38b48a2822e1bece808ea56 = L.marker(
+                [50.940287, -2.640685],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_68e3d9bd252a43ae90d46853e1913885 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1151a7a4a38b48a2822e1bece808ea56.setIcon(icon_68e3d9bd252a43ae90d46853e1913885);
+        
+    
+        var popup_2c54e7c2259f47e4829606d61fbd251b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d18c77d57ea847a688e7ad06388168aa = $(`<div id="html_d18c77d57ea847a688e7ad06388168aa" style="width: 100.0%; height: 100.0%;">Sold price here is ₤95500</div>`)[0];
+            popup_2c54e7c2259f47e4829606d61fbd251b.setContent(html_d18c77d57ea847a688e7ad06388168aa);
+        
+
+        marker_1151a7a4a38b48a2822e1bece808ea56.bindPopup(popup_2c54e7c2259f47e4829606d61fbd251b)
+        ;
+
+        
+    
+    
+            var marker_b9f031e1373f465ea6b6118f39daf2ee = L.marker(
+                [50.939667, -2.643907],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_96d454d49b9544d6ae8c6c2050c2febe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b9f031e1373f465ea6b6118f39daf2ee.setIcon(icon_96d454d49b9544d6ae8c6c2050c2febe);
+        
+    
+        var popup_a3b2579c252044599745b58ef06edef4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d1219df018f740bfb75e39da5535a5de = $(`<div id="html_d1219df018f740bfb75e39da5535a5de" style="width: 100.0%; height: 100.0%;">Sold price here is ₤164995</div>`)[0];
+            popup_a3b2579c252044599745b58ef06edef4.setContent(html_d1219df018f740bfb75e39da5535a5de);
+        
+
+        marker_b9f031e1373f465ea6b6118f39daf2ee.bindPopup(popup_a3b2579c252044599745b58ef06edef4)
+        ;
+
+        
+    
+    
+            var marker_d389cfa0cef1491781da76932a94cac7 = L.marker(
+                [50.937817, -2.642032],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_4929453c488e4702b6d12ef8ec3e5204 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d389cfa0cef1491781da76932a94cac7.setIcon(icon_4929453c488e4702b6d12ef8ec3e5204);
+        
+    
+        var popup_4d937464c292411dba71349ca754a343 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f220f6c513904005a2306782d866ee5c = $(`<div id="html_f220f6c513904005a2306782d866ee5c" style="width: 100.0%; height: 100.0%;">Sold price here is ₤490000</div>`)[0];
+            popup_4d937464c292411dba71349ca754a343.setContent(html_f220f6c513904005a2306782d866ee5c);
+        
+
+        marker_d389cfa0cef1491781da76932a94cac7.bindPopup(popup_4d937464c292411dba71349ca754a343)
+        ;
+
+        
+    
+    
+            var marker_4126e97a323b4885a8a6bcdc9758fbb1 = L.marker(
+                [50.937817, -2.642032],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_a23991f47f1a4940bbedc5ce046008de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4126e97a323b4885a8a6bcdc9758fbb1.setIcon(icon_a23991f47f1a4940bbedc5ce046008de);
+        
+    
+        var popup_5821567a1a3449199f695777abfaf6b1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_da185bf1d36e428ab38dc76bda756a23 = $(`<div id="html_da185bf1d36e428ab38dc76bda756a23" style="width: 100.0%; height: 100.0%;">Sold price here is ₤188500</div>`)[0];
+            popup_5821567a1a3449199f695777abfaf6b1.setContent(html_da185bf1d36e428ab38dc76bda756a23);
+        
+
+        marker_4126e97a323b4885a8a6bcdc9758fbb1.bindPopup(popup_5821567a1a3449199f695777abfaf6b1)
+        ;
+
+        
+    
+    
+            var marker_1c7dd6b6c0264d4885939ffc35220ae9 = L.marker(
+                [50.938156, -2.640712],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_b5ce7c6d7dbf450f83c5d623f4c8baf7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1c7dd6b6c0264d4885939ffc35220ae9.setIcon(icon_b5ce7c6d7dbf450f83c5d623f4c8baf7);
+        
+    
+        var popup_6b4bd8dd37ad4d7bb33da64e4f8f1876 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9221e6e8c8184375ae4c28fd93c21ffe = $(`<div id="html_9221e6e8c8184375ae4c28fd93c21ffe" style="width: 100.0%; height: 100.0%;">Sold price here is ₤142995</div>`)[0];
+            popup_6b4bd8dd37ad4d7bb33da64e4f8f1876.setContent(html_9221e6e8c8184375ae4c28fd93c21ffe);
+        
+
+        marker_1c7dd6b6c0264d4885939ffc35220ae9.bindPopup(popup_6b4bd8dd37ad4d7bb33da64e4f8f1876)
+        ;
+
+        
+    
+    
+            var marker_a5ed3d6c6c4244aaa9508bcfd8643772 = L.marker(
+                [50.946037, -2.643326],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_79bb0a897a974766bc22269a491f52bd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a5ed3d6c6c4244aaa9508bcfd8643772.setIcon(icon_79bb0a897a974766bc22269a491f52bd);
+        
+    
+        var popup_cac5b62a42dc4a58b12b227d0a1c4f42 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cde7dc9ee0104b468aaf8abde634f173 = $(`<div id="html_cde7dc9ee0104b468aaf8abde634f173" style="width: 100.0%; height: 100.0%;">Sold price here is ₤76965</div>`)[0];
+            popup_cac5b62a42dc4a58b12b227d0a1c4f42.setContent(html_cde7dc9ee0104b468aaf8abde634f173);
+        
+
+        marker_a5ed3d6c6c4244aaa9508bcfd8643772.bindPopup(popup_cac5b62a42dc4a58b12b227d0a1c4f42)
+        ;
+
+        
+    
+    
+            var marker_2503ed9141e948b1a60772b3921e81ed = L.marker(
+                [50.941123, -2.645607],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_74550dfdd81c4a1aae6e1bd78929a153 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2503ed9141e948b1a60772b3921e81ed.setIcon(icon_74550dfdd81c4a1aae6e1bd78929a153);
+        
+    
+        var popup_98dd16349f284af2a3312677df878ca0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_079c526ec87242fa8b8f1a3c74ef2d62 = $(`<div id="html_079c526ec87242fa8b8f1a3c74ef2d62" style="width: 100.0%; height: 100.0%;">Sold price here is ₤402500</div>`)[0];
+            popup_98dd16349f284af2a3312677df878ca0.setContent(html_079c526ec87242fa8b8f1a3c74ef2d62);
+        
+
+        marker_2503ed9141e948b1a60772b3921e81ed.bindPopup(popup_98dd16349f284af2a3312677df878ca0)
+        ;
+
+        
+    
+    
+            var marker_6d797abfae3e4bc0a4aee1dc09c605f7 = L.marker(
+                [50.94482100000001, -2.6467970000000003],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_d40261adee55460282f54f4fa40e7457 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6d797abfae3e4bc0a4aee1dc09c605f7.setIcon(icon_d40261adee55460282f54f4fa40e7457);
+        
+    
+        var popup_44861663c7024cee82dcda67e22db95d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_152cdff3b41a482280477ec69102d20d = $(`<div id="html_152cdff3b41a482280477ec69102d20d" style="width: 100.0%; height: 100.0%;">Sold price here is ₤169000</div>`)[0];
+            popup_44861663c7024cee82dcda67e22db95d.setContent(html_152cdff3b41a482280477ec69102d20d);
+        
+
+        marker_6d797abfae3e4bc0a4aee1dc09c605f7.bindPopup(popup_44861663c7024cee82dcda67e22db95d)
+        ;
+
+        
+    
+    
+            var marker_508b913109a14e73bc52142601f4036b = L.marker(
+                [50.940287, -2.640685],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_d869d94386364007afd79aeff09c07c4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_508b913109a14e73bc52142601f4036b.setIcon(icon_d869d94386364007afd79aeff09c07c4);
+        
+    
+        var popup_c258f877a34b4b0abdf9e9b4c482fd58 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d5fa2100aa8b4196906b56d718d290cb = $(`<div id="html_d5fa2100aa8b4196906b56d718d290cb" style="width: 100.0%; height: 100.0%;">Sold price here is ₤177000</div>`)[0];
+            popup_c258f877a34b4b0abdf9e9b4c482fd58.setContent(html_d5fa2100aa8b4196906b56d718d290cb);
+        
+
+        marker_508b913109a14e73bc52142601f4036b.bindPopup(popup_c258f877a34b4b0abdf9e9b4c482fd58)
+        ;
+
+        
+    
+    
+            var marker_0862e7bc45e34e069d9c57f537439e7a = L.marker(
+                [50.940526, -2.644631],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_f9ac6bc1ae5f44dab811a8ca660f507d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0862e7bc45e34e069d9c57f537439e7a.setIcon(icon_f9ac6bc1ae5f44dab811a8ca660f507d);
+        
+    
+        var popup_bd396c7842d0400e874715b947037cdf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_007ad6676e4c423c8e7a30108dfe2b12 = $(`<div id="html_007ad6676e4c423c8e7a30108dfe2b12" style="width: 100.0%; height: 100.0%;">Sold price here is ₤121000</div>`)[0];
+            popup_bd396c7842d0400e874715b947037cdf.setContent(html_007ad6676e4c423c8e7a30108dfe2b12);
+        
+
+        marker_0862e7bc45e34e069d9c57f537439e7a.bindPopup(popup_bd396c7842d0400e874715b947037cdf)
+        ;
+
+        
+    
+    
+            var marker_b3c3aa04a37847d79fe2a0b2b0a64bf2 = L.marker(
+                [50.942577, -2.643222],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_38451fd493644edb8ee5cf14f4da115a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b3c3aa04a37847d79fe2a0b2b0a64bf2.setIcon(icon_38451fd493644edb8ee5cf14f4da115a);
+        
+    
+        var popup_c5baebf35a504105ab5968f1d9d69e59 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ef18dfee8c3240bfa5270fb6a63046cd = $(`<div id="html_ef18dfee8c3240bfa5270fb6a63046cd" style="width: 100.0%; height: 100.0%;">Sold price here is ₤209995</div>`)[0];
+            popup_c5baebf35a504105ab5968f1d9d69e59.setContent(html_ef18dfee8c3240bfa5270fb6a63046cd);
+        
+
+        marker_b3c3aa04a37847d79fe2a0b2b0a64bf2.bindPopup(popup_c5baebf35a504105ab5968f1d9d69e59)
+        ;
+
+        
+    
+    
+            var marker_57a7d36fea8b4f24bfedbb0c84889c80 = L.marker(
+                [50.940526, -2.644631],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_73d23032137e4b3e98a0748ef77bcd6c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_57a7d36fea8b4f24bfedbb0c84889c80.setIcon(icon_73d23032137e4b3e98a0748ef77bcd6c);
+        
+    
+        var popup_68a62007f79b4e85bd0477db264049be = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c2545a6602474fd1bd0b22b9091abb4c = $(`<div id="html_c2545a6602474fd1bd0b22b9091abb4c" style="width: 100.0%; height: 100.0%;">Sold price here is ₤220000</div>`)[0];
+            popup_68a62007f79b4e85bd0477db264049be.setContent(html_c2545a6602474fd1bd0b22b9091abb4c);
+        
+
+        marker_57a7d36fea8b4f24bfedbb0c84889c80.bindPopup(popup_68a62007f79b4e85bd0477db264049be)
+        ;
+
+        
+    
+    
+            var marker_c120761259e54133acbf8338da0706af = L.marker(
+                [50.942187, -2.648283],
+                {}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_766e3e6c6a734bd591a17db046d69294 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c120761259e54133acbf8338da0706af.setIcon(icon_766e3e6c6a734bd591a17db046d69294);
+        
+    
+        var popup_2ced7550953d4083b22ea3d7ec5f9b99 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1a59c221f9a3414d81cd1176f9892193 = $(`<div id="html_1a59c221f9a3414d81cd1176f9892193" style="width: 100.0%; height: 100.0%;">Sold price here is ₤240000</div>`)[0];
+            popup_2ced7550953d4083b22ea3d7ec5f9b99.setContent(html_1a59c221f9a3414d81cd1176f9892193);
+        
+
+        marker_c120761259e54133acbf8338da0706af.bindPopup(popup_2ced7550953d4083b22ea3d7ec5f9b99)
+        ;
+
+        
+    
+    
+            var marker_80b948c93a664a63928392679ffaab6f = L.marker(
+                [50.941123, -2.645607],
+                {"numberOfSides": 8}
+            ).addTo(map_448f73cb3f22408b8f03dcbae8187981);
+        
+    
+            var icon_78208ff0f79744028e315505b6e269a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_80b948c93a664a63928392679ffaab6f.setIcon(icon_78208ff0f79744028e315505b6e269a3);
+        
+    
+        var popup_47066cbe08514ef0ab8af871659d8f72 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9609ae4ae1b642daba493bb9ed9b281a = $(`<div id="html_9609ae4ae1b642daba493bb9ed9b281a" style="width: 100.0%; height: 100.0%;">Estimate price is ₤294286</div>`)[0];
+            popup_47066cbe08514ef0ab8af871659d8f72.setContent(html_9609ae4ae1b642daba493bb9ed9b281a);
+        
+
+        marker_80b948c93a664a63928392679ffaab6f.bindPopup(popup_47066cbe08514ef0ab8af871659d8f72)
+        ;
+
+        
+    
+</script>

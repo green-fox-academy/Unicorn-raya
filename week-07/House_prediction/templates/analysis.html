@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>property price advice</title>
+        <style>            
+            .head_form{
+                    background-color:rgb(89, 148, 175);
+                    width: auto;
+                    height: 65px;
+                    text-align: left;
+                    font-size: 250%;
+                    background-image: url(dog.jpg);
+                    background-size: 5%;
+                    background-position-x: left;
+                    background-repeat: no-repeat;
+                }
+            table{
+                border-collapse: collapse;
+            }
+            th{
+                border: 1px solid black;
+                padding: 1px;
+                text-align:center;
+            }
+            td{
+                border: 1px solid black;
+                padding: 1px;
+                text-align:center;
+            }
+            .img{
+                float：right;
+            }
+        </style>
+
+    </head>
+    <body>
+        <!-- <div class = "head_form">
+            <ul>
+                <a href = "/"><img src="static/homei.png" height="50" width="50"></a>
+                <a>Which emoji is the most common as reaction in the thanks channel?</a>
+            </ul>
+        </div> -->
+       
+        <div style="display:inline-block">
+        <table align="center">
+            {% for d in result %}
+            <tr>
+                <td>{{d}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <table align="center">
+            {% for d in input_data %}
+            <tr>
+                <td>{{d}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        </div> 
+        <div style="display:inline-block">
+        </div>
+    </body>
+</html>
